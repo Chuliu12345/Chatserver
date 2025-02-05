@@ -109,3 +109,22 @@ MsgHandler ChatService::getHandler(int msgid)
         return msgHandlerMap[msgid];
     }
 }
+
+void ChatService::clientCloseException(const TcpConnectionPtr& conn) {
+    User user;
+    {    
+    std::lock_guard<std::mutex> lock(connMutex);
+    for (auto it = userConnMap.begin(); it != userConnMap.end(); it++) {
+        if (it->second == conn) {
+            // 由于conn为指针，可以直接进行比较
+            user.setId(it->first);
+            userConnMap.erase(it);
+            break;
+        }
+    }
+    }
+    // 更新用户状态
+    user.setState("offline");
+    userModel.updateState(user);
+
+}

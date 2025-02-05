@@ -23,7 +23,10 @@ public:
     void login(const TcpConnectionPtr& conn, json& js, Timestamp time);
     // 注册业务
     void reg(const TcpConnectionPtr& conn, json& js, Timestamp time);
+    // 根据msgid获取对应的业务回调
     MsgHandler getHandler(int msgid);
+    // 处理客户端异常退出
+    void clientCloseException(const TcpConnectionPtr& conn);
 private:
 
     ChatService();

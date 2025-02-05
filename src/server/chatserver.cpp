@@ -29,6 +29,8 @@ void ChatServer::start() {
 void ChatServer::onConnection(const TcpConnectionPtr& conn) {
     // 断开连接时释放资源
     if (!conn->connected()) {
+        // 断开时需要处理
+        ChatService::instance()->clientCloseException(conn);
         conn->shutdown();
     }
     else {
