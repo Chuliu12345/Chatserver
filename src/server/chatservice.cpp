@@ -16,6 +16,8 @@ ChatService::ChatService()
     msgHandlerMap.insert({LOGIN_MSG, loginFun});
     auto regFun = std::bind(&ChatService::reg, this, _1, _2, _3);
     msgHandlerMap.insert({REG_MSG, regFun});
+    auto oneChatFun = std::bind(&ChatService::oneChat, this, _1, _2, _3);
+    msgHandlerMap.insert({ONE_CHAT_MSG,oneChatFun});
 }
 
 void ChatService::login(const TcpConnectionPtr &conn, json &js, Timestamp time)
@@ -38,7 +40,7 @@ void ChatService::login(const TcpConnectionPtr &conn, json &js, Timestamp time)
             // 登录成功
             {
             std::lock_guard <std::mutex> lock(connMutex);
-             // 记录用户链接
+            // 记录用户链接
             userConnMap.insert({id,conn});
             }
             // 更新用户状态
@@ -49,6 +51,15 @@ void ChatService::login(const TcpConnectionPtr &conn, json &js, Timestamp time)
             response["errorno"] = 0;
             response["id"] = user.getId();
             response["name"] = user.getName();
+
+            // 查询用户是否有离线消息
+            vector<string> vec = offlineMsgModel.query(id);
+            if (!vec.empty()) {
+                response["offlinemsg"] = vec;
+                // 注意释放资源
+                offlineMsgModel.remove(id);
+            }
+
             conn->send(response.dump());
         }
     }
@@ -91,6 +102,27 @@ void ChatService::reg(const TcpConnectionPtr &conn, json &js, Timestamp time) {
 
 }
 
+void ChatService::oneChat(const TcpConnectionPtr &conn, json &js, Timestamp time) {
+    int toid = js["to"].get<int>();
+    {
+    std::lock_guard<std::mutex> lock(connMutex);
+    auto it = userConnMap.find(toid);
+    if (it != userConnMap.end()) {
+        // 用户在线，转发消息
+        it->second->send(js.dump());
+        return;
+
+    }
+    else {
+        // 用户下线,存储离线消息
+        offlineMsgModel.insert(toid,js.dump());
+
+    }
+
+    }
+
+}
+
 MsgHandler ChatService::getHandler(int msgid)
 {
     // 考虑报错,利用muduo库打印错误信息
@@ -124,7 +156,10 @@ void ChatService::clientCloseException(const TcpConnectionPtr& conn) {
     }
     }
     // 更新用户状态
-    user.setState("offline");
-    userModel.updateState(user);
+    if (user.getId() != -1) {
+        user.setState("offline");
+        userModel.updateState(user); // 在updataState中，需要向mysql传入的参数只有id和state，因此需要对这两个成员赋值
+    }
 
 }
+

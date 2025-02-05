@@ -310,6 +310,7 @@ src/server/CMakeFiles/ChatServer.dir/chatservice.cpp.o: \
  /usr/include/c++/11/bits/indirect_array.h \
  /home/chuliu_wsl/Documents/2_Projects/ChatServer/include/server/usermodel.hpp \
  /home/chuliu_wsl/Documents/2_Projects/ChatServer/include/server/user.hpp \
+ /home/chuliu_wsl/Documents/2_Projects/ChatServer/include/server/offlinemessagemodel.hpp \
  /home/chuliu_wsl/Documents/2_Projects/ChatServer/include/public.hpp \
  /home/chuliu_wsl/Documents/2_Projects/ChatServer/include/server/user.hpp \
  /home/chuliu_wsl/Documents/2_Projects/ChatServer/include/server/usermodel.hpp \

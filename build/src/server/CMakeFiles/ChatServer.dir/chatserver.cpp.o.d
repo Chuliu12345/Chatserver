@@ -315,4 +315,5 @@ src/server/CMakeFiles/ChatServer.dir/chatserver.cpp.o: \
  /usr/include/c++/11/bits/indirect_array.h \
  /home/chuliu_wsl/Documents/2_Projects/ChatServer/include/server/usermodel.hpp \
  /home/chuliu_wsl/Documents/2_Projects/ChatServer/include/server/user.hpp \
+ /home/chuliu_wsl/Documents/2_Projects/ChatServer/include/server/offlinemessagemodel.hpp \
  /usr/include/muduo/base/Logging.h /usr/include/muduo/base/LogStream.h
