@@ -316,4 +316,6 @@ src/server/CMakeFiles/ChatServer.dir/chatserver.cpp.o: \
  /home/chuliu_wsl/Documents/2_Projects/ChatServer/include/server/usermodel.hpp \
  /home/chuliu_wsl/Documents/2_Projects/ChatServer/include/server/user.hpp \
  /home/chuliu_wsl/Documents/2_Projects/ChatServer/include/server/offlinemessagemodel.hpp \
+ /home/chuliu_wsl/Documents/2_Projects/ChatServer/include/friendmodel.hpp \
+ /home/chuliu_wsl/Documents/2_Projects/ChatServer/include/server/user.hpp \
  /usr/include/muduo/base/Logging.h /usr/include/muduo/base/LogStream.h

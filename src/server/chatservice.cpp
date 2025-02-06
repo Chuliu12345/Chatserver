@@ -1,8 +1,9 @@
+#include <muduo/base/Logging.h>
 #include "chatservice.hpp"
 #include "public.hpp"
 #include "user.hpp"
 #include "usermodel.hpp"
-#include <muduo/base/Logging.h>
+#include "friendmodel.hpp"
 ChatService *ChatService::instance()
 {
     static ChatService service;
@@ -18,6 +19,8 @@ ChatService::ChatService()
     msgHandlerMap.insert({REG_MSG, regFun});
     auto oneChatFun = std::bind(&ChatService::oneChat, this, _1, _2, _3);
     msgHandlerMap.insert({ONE_CHAT_MSG,oneChatFun});
+    auto addFriendFun = std::bind(&ChatService::addFriend, this, _1, _2, _3);
+    msgHandlerMap.insert({ADD_FRIEND_MSG,addFriendFun});
 }
 
 void ChatService::login(const TcpConnectionPtr &conn, json &js, Timestamp time)
@@ -53,11 +56,25 @@ void ChatService::login(const TcpConnectionPtr &conn, json &js, Timestamp time)
             response["name"] = user.getName();
 
             // 查询用户是否有离线消息
-            vector<string> vec = offlineMsgModel.query(id);
-            if (!vec.empty()) {
-                response["offlinemsg"] = vec;
+            vector<string> offlinemsg_vec = offlineMsgModel.query(id);
+            if (!offlinemsg_vec.empty()) {
+                response["offlinemsg"] = offlinemsg_vec;
                 // 注意释放资源
                 offlineMsgModel.remove(id);
+            }
+
+            // 查询好友列表
+            vector<User> friend_vec = friendModel.query(id);
+            if (!friend_vec.empty()) {
+                vector<string> friendinfo_vec;
+                for (User& user : friend_vec) {
+                    json js;
+                    js["id"] = user.getId();
+                    js["name"] = user.getName();
+                    js["state"] = user.getState();
+                    friendinfo_vec.push_back(js.dump());
+                }
+                response["friends"] = friendinfo_vec;
             }
 
             conn->send(response.dump());
@@ -120,6 +137,17 @@ void ChatService::oneChat(const TcpConnectionPtr &conn, json &js, Timestamp time
     }
 
     }
+
+}
+
+// 添加好友业务
+void ChatService::addFriend(const TcpConnectionPtr& conn, json& js, Timestamp time) {
+    int userid = js["id"].get<int>();
+    int friendid = js["friendid"].get<int>();
+
+    // 存储好友信息
+    FriendModel friendModel;
+    friendModel.insertFriend(userid,friendid);
 
 }
 
