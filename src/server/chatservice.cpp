@@ -163,3 +163,8 @@ void ChatService::clientCloseException(const TcpConnectionPtr& conn) {
 
 }
 
+void ChatService::reset() {
+    // 把online状态的用户设置为offline
+    userModel.resetState();
+}
+

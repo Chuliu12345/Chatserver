@@ -61,3 +61,14 @@ bool UserModel::updateState(User user) {
     return false;
 
 }
+
+void UserModel::resetState() {
+    char sql[1024] = {0};
+    // sprintf(sql,"update user set state = 'offline' where state = 'online'");
+    sprintf(sql,"update user set state = 'offline'");
+    std::cout << "node1"<< std::endl;
+    MySQL mysql;
+    if (mysql.connect()) {
+        mysql.update(sql);
+    } 
+}
