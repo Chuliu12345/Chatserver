@@ -318,4 +318,7 @@ src/server/CMakeFiles/ChatServer.dir/chatserver.cpp.o: \
  /home/chuliu_wsl/Documents/2_Projects/ChatServer/include/server/offlinemessagemodel.hpp \
  /home/chuliu_wsl/Documents/2_Projects/ChatServer/include/friendmodel.hpp \
  /home/chuliu_wsl/Documents/2_Projects/ChatServer/include/server/user.hpp \
+ /home/chuliu_wsl/Documents/2_Projects/ChatServer/include/server/groupmodel.hpp \
+ /home/chuliu_wsl/Documents/2_Projects/ChatServer/include/server/group.hpp \
+ /home/chuliu_wsl/Documents/2_Projects/ChatServer/include/server/groupuser.hpp \
  /usr/include/muduo/base/Logging.h /usr/include/muduo/base/LogStream.h

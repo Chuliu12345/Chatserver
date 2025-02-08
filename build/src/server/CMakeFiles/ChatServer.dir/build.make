@@ -111,10 +111,24 @@ src/server/CMakeFiles/ChatServer.dir/friendmodel.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ChatServer.dir/friendmodel.cpp.s"
 	cd /home/chuliu_wsl/Documents/2_Projects/ChatServer/build/src/server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chuliu_wsl/Documents/2_Projects/ChatServer/src/server/friendmodel.cpp -o CMakeFiles/ChatServer.dir/friendmodel.cpp.s
 
+src/server/CMakeFiles/ChatServer.dir/groupmodel.cpp.o: src/server/CMakeFiles/ChatServer.dir/flags.make
+src/server/CMakeFiles/ChatServer.dir/groupmodel.cpp.o: ../src/server/groupmodel.cpp
+src/server/CMakeFiles/ChatServer.dir/groupmodel.cpp.o: src/server/CMakeFiles/ChatServer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chuliu_wsl/Documents/2_Projects/ChatServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/server/CMakeFiles/ChatServer.dir/groupmodel.cpp.o"
+	cd /home/chuliu_wsl/Documents/2_Projects/ChatServer/build/src/server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/server/CMakeFiles/ChatServer.dir/groupmodel.cpp.o -MF CMakeFiles/ChatServer.dir/groupmodel.cpp.o.d -o CMakeFiles/ChatServer.dir/groupmodel.cpp.o -c /home/chuliu_wsl/Documents/2_Projects/ChatServer/src/server/groupmodel.cpp
+
+src/server/CMakeFiles/ChatServer.dir/groupmodel.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ChatServer.dir/groupmodel.cpp.i"
+	cd /home/chuliu_wsl/Documents/2_Projects/ChatServer/build/src/server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chuliu_wsl/Documents/2_Projects/ChatServer/src/server/groupmodel.cpp > CMakeFiles/ChatServer.dir/groupmodel.cpp.i
+
+src/server/CMakeFiles/ChatServer.dir/groupmodel.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ChatServer.dir/groupmodel.cpp.s"
+	cd /home/chuliu_wsl/Documents/2_Projects/ChatServer/build/src/server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chuliu_wsl/Documents/2_Projects/ChatServer/src/server/groupmodel.cpp -o CMakeFiles/ChatServer.dir/groupmodel.cpp.s
+
 src/server/CMakeFiles/ChatServer.dir/main.cpp.o: src/server/CMakeFiles/ChatServer.dir/flags.make
 src/server/CMakeFiles/ChatServer.dir/main.cpp.o: ../src/server/main.cpp
 src/server/CMakeFiles/ChatServer.dir/main.cpp.o: src/server/CMakeFiles/ChatServer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chuliu_wsl/Documents/2_Projects/ChatServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/server/CMakeFiles/ChatServer.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chuliu_wsl/Documents/2_Projects/ChatServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/server/CMakeFiles/ChatServer.dir/main.cpp.o"
 	cd /home/chuliu_wsl/Documents/2_Projects/ChatServer/build/src/server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/server/CMakeFiles/ChatServer.dir/main.cpp.o -MF CMakeFiles/ChatServer.dir/main.cpp.o.d -o CMakeFiles/ChatServer.dir/main.cpp.o -c /home/chuliu_wsl/Documents/2_Projects/ChatServer/src/server/main.cpp
 
 src/server/CMakeFiles/ChatServer.dir/main.cpp.i: cmake_force
@@ -128,7 +142,7 @@ src/server/CMakeFiles/ChatServer.dir/main.cpp.s: cmake_force
 src/server/CMakeFiles/ChatServer.dir/offlinemessagemodel.cpp.o: src/server/CMakeFiles/ChatServer.dir/flags.make
 src/server/CMakeFiles/ChatServer.dir/offlinemessagemodel.cpp.o: ../src/server/offlinemessagemodel.cpp
 src/server/CMakeFiles/ChatServer.dir/offlinemessagemodel.cpp.o: src/server/CMakeFiles/ChatServer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chuliu_wsl/Documents/2_Projects/ChatServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/server/CMakeFiles/ChatServer.dir/offlinemessagemodel.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chuliu_wsl/Documents/2_Projects/ChatServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/server/CMakeFiles/ChatServer.dir/offlinemessagemodel.cpp.o"
 	cd /home/chuliu_wsl/Documents/2_Projects/ChatServer/build/src/server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/server/CMakeFiles/ChatServer.dir/offlinemessagemodel.cpp.o -MF CMakeFiles/ChatServer.dir/offlinemessagemodel.cpp.o.d -o CMakeFiles/ChatServer.dir/offlinemessagemodel.cpp.o -c /home/chuliu_wsl/Documents/2_Projects/ChatServer/src/server/offlinemessagemodel.cpp
 
 src/server/CMakeFiles/ChatServer.dir/offlinemessagemodel.cpp.i: cmake_force
@@ -142,7 +156,7 @@ src/server/CMakeFiles/ChatServer.dir/offlinemessagemodel.cpp.s: cmake_force
 src/server/CMakeFiles/ChatServer.dir/usermodel.cpp.o: src/server/CMakeFiles/ChatServer.dir/flags.make
 src/server/CMakeFiles/ChatServer.dir/usermodel.cpp.o: ../src/server/usermodel.cpp
 src/server/CMakeFiles/ChatServer.dir/usermodel.cpp.o: src/server/CMakeFiles/ChatServer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chuliu_wsl/Documents/2_Projects/ChatServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/server/CMakeFiles/ChatServer.dir/usermodel.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chuliu_wsl/Documents/2_Projects/ChatServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/server/CMakeFiles/ChatServer.dir/usermodel.cpp.o"
 	cd /home/chuliu_wsl/Documents/2_Projects/ChatServer/build/src/server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/server/CMakeFiles/ChatServer.dir/usermodel.cpp.o -MF CMakeFiles/ChatServer.dir/usermodel.cpp.o.d -o CMakeFiles/ChatServer.dir/usermodel.cpp.o -c /home/chuliu_wsl/Documents/2_Projects/ChatServer/src/server/usermodel.cpp
 
 src/server/CMakeFiles/ChatServer.dir/usermodel.cpp.i: cmake_force
@@ -156,7 +170,7 @@ src/server/CMakeFiles/ChatServer.dir/usermodel.cpp.s: cmake_force
 src/server/CMakeFiles/ChatServer.dir/db/db.cpp.o: src/server/CMakeFiles/ChatServer.dir/flags.make
 src/server/CMakeFiles/ChatServer.dir/db/db.cpp.o: ../src/server/db/db.cpp
 src/server/CMakeFiles/ChatServer.dir/db/db.cpp.o: src/server/CMakeFiles/ChatServer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chuliu_wsl/Documents/2_Projects/ChatServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/server/CMakeFiles/ChatServer.dir/db/db.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chuliu_wsl/Documents/2_Projects/ChatServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/server/CMakeFiles/ChatServer.dir/db/db.cpp.o"
 	cd /home/chuliu_wsl/Documents/2_Projects/ChatServer/build/src/server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/server/CMakeFiles/ChatServer.dir/db/db.cpp.o -MF CMakeFiles/ChatServer.dir/db/db.cpp.o.d -o CMakeFiles/ChatServer.dir/db/db.cpp.o -c /home/chuliu_wsl/Documents/2_Projects/ChatServer/src/server/db/db.cpp
 
 src/server/CMakeFiles/ChatServer.dir/db/db.cpp.i: cmake_force
@@ -172,6 +186,7 @@ ChatServer_OBJECTS = \
 "CMakeFiles/ChatServer.dir/chatserver.cpp.o" \
 "CMakeFiles/ChatServer.dir/chatservice.cpp.o" \
 "CMakeFiles/ChatServer.dir/friendmodel.cpp.o" \
+"CMakeFiles/ChatServer.dir/groupmodel.cpp.o" \
 "CMakeFiles/ChatServer.dir/main.cpp.o" \
 "CMakeFiles/ChatServer.dir/offlinemessagemodel.cpp.o" \
 "CMakeFiles/ChatServer.dir/usermodel.cpp.o" \
@@ -183,13 +198,14 @@ ChatServer_EXTERNAL_OBJECTS =
 ../bin/ChatServer: src/server/CMakeFiles/ChatServer.dir/chatserver.cpp.o
 ../bin/ChatServer: src/server/CMakeFiles/ChatServer.dir/chatservice.cpp.o
 ../bin/ChatServer: src/server/CMakeFiles/ChatServer.dir/friendmodel.cpp.o
+../bin/ChatServer: src/server/CMakeFiles/ChatServer.dir/groupmodel.cpp.o
 ../bin/ChatServer: src/server/CMakeFiles/ChatServer.dir/main.cpp.o
 ../bin/ChatServer: src/server/CMakeFiles/ChatServer.dir/offlinemessagemodel.cpp.o
 ../bin/ChatServer: src/server/CMakeFiles/ChatServer.dir/usermodel.cpp.o
 ../bin/ChatServer: src/server/CMakeFiles/ChatServer.dir/db/db.cpp.o
 ../bin/ChatServer: src/server/CMakeFiles/ChatServer.dir/build.make
 ../bin/ChatServer: src/server/CMakeFiles/ChatServer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/chuliu_wsl/Documents/2_Projects/ChatServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable ../../../bin/ChatServer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/chuliu_wsl/Documents/2_Projects/ChatServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable ../../../bin/ChatServer"
 	cd /home/chuliu_wsl/Documents/2_Projects/ChatServer/build/src/server && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ChatServer.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

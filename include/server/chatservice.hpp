@@ -10,6 +10,7 @@
 #include "usermodel.hpp"
 #include "offlinemessagemodel.hpp"
 #include "friendmodel.hpp"
+#include "groupmodel.hpp"
 
 using namespace muduo;
 using namespace muduo::net;
@@ -39,6 +40,9 @@ public:
 private:
 
     ChatService();
+    void createGroup(const TcpConnectionPtr& conn, json& js, Timestamp time);
+    void addGroup(const TcpConnectionPtr& conn, json& js, Timestamp time);
+    void groupChat(const TcpConnectionPtr& conn, json& js, Timestamp time);
     std::unordered_map<int,MsgHandler> msgHandlerMap;
 
     // 存储在线用户的通信连接 -- 使用unordered_mat
@@ -50,6 +54,7 @@ private:
     UserModel userModel;
     OfflineMsgModel offlineMsgModel;
     FriendModel friendModel;
+    GroupModel groupModel;
 
 };
 

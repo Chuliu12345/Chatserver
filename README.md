@@ -3,6 +3,7 @@
 **version1.2**  -   add 点对点聊天及点对点聊天中的离线消息处理，添加ChatServer :: oneChat实现点对点聊天，添加OfflineMsgModel类实现离线消息处理(mysql中添加offlinemessage表) <br>
 **version1.3**  -   服务器异常处理,在ctrl+C中止服务器后，重置user的状态 : ChatService::reset,UserModel::userModel.resetState <br>
 
-**version2.1**  -   add 好友业务 : ChatService::addFriend, 
-                    fix 修复登录时用户id显示错误 (in ChatService::login)
-                
+**version2.1**  -   
+add 好友业务 : ChatService::addFriend, <br>
+fix 修复登录时用户id显示错误 (in ChatService::login)<br>
+add 群组业务：群创建，成员加入，显示群组信息

@@ -318,6 +318,9 @@ src/server/CMakeFiles/ChatServer.dir/main.cpp.o: \
  /home/chuliu_wsl/Documents/2_Projects/ChatServer/include/server/offlinemessagemodel.hpp \
  /home/chuliu_wsl/Documents/2_Projects/ChatServer/include/friendmodel.hpp \
  /home/chuliu_wsl/Documents/2_Projects/ChatServer/include/server/user.hpp \
+ /home/chuliu_wsl/Documents/2_Projects/ChatServer/include/server/groupmodel.hpp \
+ /home/chuliu_wsl/Documents/2_Projects/ChatServer/include/server/group.hpp \
+ /home/chuliu_wsl/Documents/2_Projects/ChatServer/include/server/groupuser.hpp \
  /usr/include/muduo/base/Logging.h /usr/include/muduo/base/LogStream.h \
  /usr/include/signal.h \
  /usr/include/x86_64-linux-gnu/bits/signum-generic.h \

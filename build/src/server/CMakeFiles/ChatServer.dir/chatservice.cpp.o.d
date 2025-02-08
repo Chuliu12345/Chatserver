@@ -1,7 +1,8 @@
 src/server/CMakeFiles/ChatServer.dir/chatservice.cpp.o: \
  /home/chuliu_wsl/Documents/2_Projects/ChatServer/src/server/chatservice.cpp \
- /usr/include/stdc-predef.h /usr/include/muduo/base/Logging.h \
- /usr/include/muduo/base/LogStream.h \
+ /usr/include/stdc-predef.h \
+ /home/chuliu_wsl/Documents/2_Projects/ChatServer/include/server/chatservice.hpp \
+ /usr/include/muduo/net/TcpConnection.h \
  /usr/include/muduo/base/noncopyable.h \
  /usr/include/muduo/base/StringPiece.h /usr/include/string.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
@@ -130,7 +131,8 @@ src/server/CMakeFiles/ChatServer.dir/chatservice.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/11/bits/charconv.h \
  /usr/include/c++/11/bits/basic_string.tcc /usr/include/assert.h \
- /usr/include/muduo/base/Timestamp.h /usr/include/muduo/base/copyable.h \
+ /usr/include/muduo/net/Callbacks.h /usr/include/muduo/base/Timestamp.h \
+ /usr/include/muduo/base/copyable.h \
  /usr/local/include/boost/operators.hpp /usr/include/c++/11/cstddef \
  /usr/include/c++/11/iterator /usr/include/c++/11/bits/stream_iterator.h \
  /usr/include/c++/11/bits/streambuf_iterator.h \
@@ -165,12 +167,9 @@ src/server/CMakeFiles/ChatServer.dir/chatservice.cpp.o: \
  /usr/local/include/boost/detail/workaround.hpp \
  /usr/local/include/boost/config/workaround.hpp \
  /usr/local/include/boost/core/addressof.hpp \
- /home/chuliu_wsl/Documents/2_Projects/ChatServer/include/server/chatservice.hpp \
- /usr/include/muduo/net/TcpConnection.h \
- /usr/include/muduo/net/Callbacks.h /usr/include/c++/11/functional \
- /usr/include/c++/11/tuple /usr/include/c++/11/utility \
- /usr/include/c++/11/bits/stl_relops.h /usr/include/c++/11/array \
- /usr/include/c++/11/bits/uses_allocator.h \
+ /usr/include/c++/11/functional /usr/include/c++/11/tuple \
+ /usr/include/c++/11/utility /usr/include/c++/11/bits/stl_relops.h \
+ /usr/include/c++/11/array /usr/include/c++/11/bits/uses_allocator.h \
  /usr/include/c++/11/bits/invoke.h /usr/include/c++/11/bits/refwrap.h \
  /usr/include/c++/11/bits/std_function.h \
  /usr/include/c++/11/unordered_map \
@@ -314,5 +313,9 @@ src/server/CMakeFiles/ChatServer.dir/chatservice.cpp.o: \
  /home/chuliu_wsl/Documents/2_Projects/ChatServer/include/server/offlinemessagemodel.hpp \
  /home/chuliu_wsl/Documents/2_Projects/ChatServer/include/friendmodel.hpp \
  /home/chuliu_wsl/Documents/2_Projects/ChatServer/include/server/user.hpp \
+ /home/chuliu_wsl/Documents/2_Projects/ChatServer/include/server/groupmodel.hpp \
+ /home/chuliu_wsl/Documents/2_Projects/ChatServer/include/server/group.hpp \
+ /home/chuliu_wsl/Documents/2_Projects/ChatServer/include/server/groupuser.hpp \
+ /usr/include/muduo/base/Logging.h /usr/include/muduo/base/LogStream.h \
  /home/chuliu_wsl/Documents/2_Projects/ChatServer/include/public.hpp \
- /home/chuliu_wsl/Documents/2_Projects/ChatServer/include/server/usermodel.hpp
+ /home/chuliu_wsl/Documents/2_Projects/ChatServer/include/server/groupmodel.hpp
