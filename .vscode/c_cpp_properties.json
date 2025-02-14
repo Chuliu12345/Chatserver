@@ -4,7 +4,8 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/include/server/db"
+                "${workspaceFolder}/include/server/db",
+                "${workspaceFolder}/include/server/redis"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",

@@ -45,6 +45,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/chuliu_wsl/Documents/2_Projects/ChatServer/build/src/server/cmake_install.cmake")
+  include("/home/chuliu_wsl/Documents/2_Projects/ChatServer/build/src/client/cmake_install.cmake")
 
 endif()
 

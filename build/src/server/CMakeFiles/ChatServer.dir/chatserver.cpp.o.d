@@ -321,4 +321,10 @@ src/server/CMakeFiles/ChatServer.dir/chatserver.cpp.o: \
  /home/chuliu_wsl/Documents/2_Projects/ChatServer/include/server/groupmodel.hpp \
  /home/chuliu_wsl/Documents/2_Projects/ChatServer/include/server/group.hpp \
  /home/chuliu_wsl/Documents/2_Projects/ChatServer/include/server/groupuser.hpp \
+ /home/chuliu_wsl/Documents/2_Projects/ChatServer/include/server/redis/redis.hpp \
+ /usr/local/include/hiredis/hiredis.h /usr/local/include/hiredis/read.h \
+ /usr/include/x86_64-linux-gnu/sys/time.h \
+ /usr/local/include/hiredis/sds.h /usr/local/include/hiredis/alloc.h \
+ /usr/include/c++/11/thread /usr/include/c++/11/bits/std_thread.h \
+ /usr/include/c++/11/bits/this_thread_sleep.h \
  /usr/include/muduo/base/Logging.h /usr/include/muduo/base/LogStream.h

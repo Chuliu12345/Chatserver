@@ -298,6 +298,30 @@ offlinemessagemodel.cpp.s:
 	cd /home/chuliu_wsl/Documents/2_Projects/ChatServer/build && $(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/offlinemessagemodel.cpp.s
 .PHONY : offlinemessagemodel.cpp.s
 
+redis/redis.o: redis/redis.cpp.o
+.PHONY : redis/redis.o
+
+# target to build an object file
+redis/redis.cpp.o:
+	cd /home/chuliu_wsl/Documents/2_Projects/ChatServer/build && $(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/redis/redis.cpp.o
+.PHONY : redis/redis.cpp.o
+
+redis/redis.i: redis/redis.cpp.i
+.PHONY : redis/redis.i
+
+# target to preprocess a source file
+redis/redis.cpp.i:
+	cd /home/chuliu_wsl/Documents/2_Projects/ChatServer/build && $(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/redis/redis.cpp.i
+.PHONY : redis/redis.cpp.i
+
+redis/redis.s: redis/redis.cpp.s
+.PHONY : redis/redis.s
+
+# target to generate assembly for a file
+redis/redis.cpp.s:
+	cd /home/chuliu_wsl/Documents/2_Projects/ChatServer/build && $(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/redis/redis.cpp.s
+.PHONY : redis/redis.cpp.s
+
 usermodel.o: usermodel.cpp.o
 .PHONY : usermodel.o
 
@@ -352,6 +376,9 @@ help:
 	@echo "... offlinemessagemodel.o"
 	@echo "... offlinemessagemodel.i"
 	@echo "... offlinemessagemodel.s"
+	@echo "... redis/redis.o"
+	@echo "... redis/redis.i"
+	@echo "... redis/redis.s"
 	@echo "... usermodel.o"
 	@echo "... usermodel.i"
 	@echo "... usermodel.s"

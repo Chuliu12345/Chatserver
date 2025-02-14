@@ -25,7 +25,6 @@ bool MySQL::connect()
     if (p != nullptr)
     {
         mysql_query(_conn, "set names gbk");
-        LOG_INFO << "connect mysql success!";
     }
     else {
         LOG_INFO << "connect myssql fail!";

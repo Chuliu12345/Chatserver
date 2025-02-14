@@ -11,6 +11,7 @@
 #include "offlinemessagemodel.hpp"
 #include "friendmodel.hpp"
 #include "groupmodel.hpp"
+#include "redis.hpp"
 
 using namespace muduo;
 using namespace muduo::net;
@@ -34,6 +35,8 @@ public:
     MsgHandler getHandler(int msgid);
     // 处理客户端异常退出
     void clientCloseException(const TcpConnectionPtr& conn);
+    // 处理用户注销
+    void loginout(const TcpConnectionPtr& conn, json& js, Timestamp time);
     // 服务器异常退出后的状态重置
     void reset();
 
@@ -43,6 +46,7 @@ private:
     void createGroup(const TcpConnectionPtr& conn, json& js, Timestamp time);
     void addGroup(const TcpConnectionPtr& conn, json& js, Timestamp time);
     void groupChat(const TcpConnectionPtr& conn, json& js, Timestamp time);
+    void handleRedisSubscribeMessage(int userid, string msg);
     std::unordered_map<int,MsgHandler> msgHandlerMap;
 
     // 存储在线用户的通信连接 -- 使用unordered_mat
@@ -55,6 +59,7 @@ private:
     OfflineMsgModel offlineMsgModel;
     FriendModel friendModel;
     GroupModel groupModel;
+    Redis redis;
 
 };
 
